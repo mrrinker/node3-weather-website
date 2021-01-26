@@ -20,7 +20,8 @@ const forecast = (latitude, longitude, callback) =>
             {
                 weather:body.current.weather_descriptions[0],
                 temperature:body.current.temperature,
-                precipitation:body.current.precip
+                precipitation:body.current.precip.current,
+                wind_speed:body.current.wind_speed
             }
         )
     }
